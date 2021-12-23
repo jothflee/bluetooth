@@ -2,7 +2,7 @@ package bluetooth
 
 import (
 	"github.com/go-ole/go-ole"
-	"tinygo.org/x/bluetooth/winbt"
+	"github.com/jothflee/bluetooth/winbt"
 )
 
 type Adapter struct {

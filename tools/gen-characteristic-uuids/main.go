@@ -12,7 +12,7 @@ import (
 	"text/template"
 	"time"
 
-	"tinygo.org/x/bluetooth"
+	"github.com/jothflee/bluetooth"
 )
 
 type Characteristic struct {

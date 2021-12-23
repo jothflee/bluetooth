@@ -31,6 +31,28 @@ var DefaultAdapter = &Adapter{
 	},
 }
 
+func NewAdapter(intf string) *Adapter {
+	a := &Adapter{
+		connectHandler: func(device Addresser, connected bool) {
+			return
+		},
+	}
+	if intf != "" {
+
+		_adapter, err := api.GetAdapter(intf)
+		if err != nil {
+			panic(err)
+		}
+		a.adapter = _adapter
+		a.id, err = a.adapter.GetAdapterID()
+		if err != nil {
+			panic(err)
+		}
+	}
+
+	return a
+}
+
 // Enable configures the BLE stack. It must be called before any
 // Bluetooth-related calls (unless otherwise indicated).
 func (a *Adapter) Enable() (err error) {

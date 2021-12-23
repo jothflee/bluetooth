@@ -6,7 +6,7 @@ import (
 	"machine"
 	"time"
 
-	"tinygo.org/x/bluetooth"
+	"github.com/jothflee/bluetooth"
 	"tinygo.org/x/drivers/st7789"
 	"tinygo.org/x/tinyterm"
 	"tinygo.org/x/tinyterm/fonts/proggy"
